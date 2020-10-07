@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.home-head {
+	background-color: #fc701e; 
+}
+.home-img {
+	background-image:url('/restaur-head.jpg'); 
+}
+
+.home-label{
+  font-size: 150%;
+  color:white;
+}
+
