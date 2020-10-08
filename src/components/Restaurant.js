@@ -14,7 +14,7 @@ export default class Restaurant extends Component {
     render() {
         return (
             <div>
-                <Home/>
+                
                 <div>
                     <div className="row">
                         <div className="col-sm-3">

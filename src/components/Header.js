@@ -10,7 +10,9 @@ import {
     DropdownToggle,
     DropdownMenu,
     DropdownItem,
-    NavbarText
+    NavbarText,
+    Label,
+    Button
   } from 'reactstrap';
 import {NavLink} from 'react-router-dom';
 
@@ -43,32 +45,32 @@ class Header extends Component {
 
         <NavbarToggler onClick={this.toggleNav} />
             <Collapse isOpen={this.state.isNavOpen} navbar>
-                <Nav className="mr-auto" navbar>
-                    <NavItem>
+                <Nav className="float-left" navbar>
+                    <NavItem className="p-2">
                         <NavLink className="nav-link" to="/home">Home</NavLink>
                     </NavItem>
                     
-                    <NavItem>
+                    <NavItem className="p-2">
                         <NavLink className="nav-link" to="https://github.com/reactstrap/reactstrap">Offers</NavLink>
                     </NavItem>
 
-                    <NavItem>
+                    <NavItem className="p-2">
                         <NavLink className="nav-link" to="/components/">Blog</NavLink>
                     </NavItem>
                     
-                    <NavItem>
+                    <NavItem className="p-2">
                         <NavLink className="nav-link" to="/restaurant">All Restaurants</NavLink>
                     </NavItem>
 
-                    <NavItem>
+                    <NavItem className="p-2">
                         <NavLink className="nav-link" to="/components/">Register with Us</NavLink>
                     </NavItem>
                     
-                    <NavItem>
+                    <NavItem className="p-2">
                         <NavLink className="nav-link" to="https://github.com/reactstrap/reactstrap">Login</NavLink>
                     </NavItem>
 
-                    <UncontrolledDropdown nav inNavbar>
+                    <UncontrolledDropdown className="p-2" nav inNavbar>
                     <DropdownToggle nav caret>More</DropdownToggle>
                         <DropdownMenu right>
                             <DropdownItem>
@@ -85,13 +87,51 @@ class Header extends Component {
                             </DropdownItem>
                         </DropdownMenu>
                     </UncontrolledDropdown>
-                    <NavItem>
+                    <NavItem className="p-2">
                         <NavLink className="nav-link" to="/components/">Cart</NavLink>
                     </NavItem>
                 </Nav>
             </Collapse>
         </div>
       </Navbar>
+      <div>
+        <div className="home-img p-4">
+            <div className="container p-5">
+                <Label className="home-label d-none d-sm-block">Find the best restaurants, cafe's and cuisines in Dubai</Label>
+                
+                <div className="row row-content m-4">
+                    
+                        
+                        <div className="offset-sm-2 col-12 col-sm-6 m-2">
+                            <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Select your area"/>
+                            
+                        </div>
+                        <div className="col-12 col-sm-2 m-2" >
+                            <Button type="submit " className="btn-success col-sm-12">Search</Button>
+                        </div>
+
+                    
+                </div>
+            </div>
+        </div>
+
+        <div className="row p-2">
+            <div className="d-none d-sm-block col-sm-4">
+                <img src="/1.svg" width="50px" height="65px"/>
+                <Label className="m-1">Find a restaurant or cuisine</Label>
+            </div>
+
+            <div className="d-none d-sm-block col-sm-4">
+            <img src="/2.svg" width="50px" height="65px"/>
+                <Label className="m-1">Find a restaurant or cuisine</Label>
+            </div>
+
+            <div className="d-none d-sm-block col-sm-4">
+            <img src="/3.svg" width="50px" height="65px"/>
+                <Label className="m-1">Find a restaurant or cuisine</Label>
+            </div>
+        </div>
+        </div>
     </div>
         )
     }

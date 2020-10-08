@@ -49,3 +49,16 @@
   color:white;
 }
 
+.footer{
+  background-image:url('/footer-background.jpg'); 
+  
+
+}
+
+body {font-family : Roboto, sans-serif;}
+
+a{color:white;}
+
+.search-text {
+  background-color: #282c34;
+}
